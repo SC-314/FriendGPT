@@ -1,0 +1,15 @@
+#MAAiMsgBubble {
+    
+    display: flex;
+    margin:10px
+}
+
+#MAAiMsgBubble > p {
+    background-color: rgb(217, 216, 212);
+    padding: 10px;
+    border-radius: 10%;
+}
+
+#MAAiMsgContainer {
+    width:75%;
+}

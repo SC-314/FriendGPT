@@ -1,0 +1,27 @@
+#MAChatInputContainer {
+    background-color: rgb(248, 246, 239);
+    border-radius: 10%;
+    border-color: black;
+    border-width: 0px;
+    border-style: solid;
+    box-shadow: 0px 10px 10px 10px rgba(0, 0, 0, 0.7);
+    padding: 10px;
+}
+
+#MATextArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+#MATextArea > textarea {
+    height: 85%;
+    width: 95%;
+    border:none;
+    background-color:rgb(248, 246, 239);
+    outline:none;
+    font-size: xx-large;
+    resize: none;
+}

@@ -1,0 +1,28 @@
+#HistoryListElement {
+    height: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5%;
+    border:3px solid black;
+
+    display:grid;
+    grid-template-rows: 1fr 5fr;
+
+}
+
+#HistoryListElement * {
+    padding: none;
+    border: none;
+    margin: none;
+}
+
+#HistoryListElement h2 {
+    display: flex;
+    justify-content: center;
+}
+
+#HistoryListElement  p {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
