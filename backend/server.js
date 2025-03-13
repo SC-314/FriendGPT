@@ -82,7 +82,7 @@ app.post("/AIresponse", async(req, res) => {
     const data = req.body;
     console.log(req.body)
     const size = data.message.length
-    const currentHistory = data.message.slice(size -3, size);
+    const currentHistory = data.message.slice(size -4, size);
     const AIprompt = currentHistory.map(element => {
         if (element[1] == 'true') {
             return({"role":"user", "content": element[0]});  // Get the message (element[0]) from the tuple
