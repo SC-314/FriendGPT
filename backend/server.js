@@ -102,7 +102,7 @@ app.post("/AIresponse", async(req, res) => {
 }) 
 
     console.log("MY PROMPT IS", AIprompt)
-    const API_KEY = "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"
+    const API_KEY = process.env.AI_API_KEY;
 
     const aiReply = await askAI(AIprompt, API_KEY);
 
