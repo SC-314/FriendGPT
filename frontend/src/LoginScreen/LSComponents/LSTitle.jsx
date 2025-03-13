@@ -1,5 +1,5 @@
 import React from "react";
-import AiLogo from './assets/AI logo.png';
+import AiLogo from '../../assets/AI logo.png';
 
 function LSTitle() {
 
