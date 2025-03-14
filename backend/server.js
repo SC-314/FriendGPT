@@ -100,7 +100,7 @@ app.post("/AIresponse", async(req, res) => {
         role: "system",
         content: "You are a " + (data.aiisgirl ? "girl" : "boy") + ", who is named " + (data.ainame)
     + ", with personality: " + (data.aipersonality) + " you are having a natural conversation" 
-    + " and messages should be like text messages"
+    + " and messages should be like text messages" + " so keep them as short as possible"
 }) 
 
     console.log("MY PROMPT IS", AIprompt)
