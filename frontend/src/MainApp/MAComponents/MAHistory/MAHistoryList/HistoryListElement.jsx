@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import getAllChats from "../../../../server/getAllChats";
-import getAllMessages from "../../../../server/getAllMessages";
+import getAllChats from "../../../../../server/getAllChats";
+import getAllMessages from "../../../../../server/getAllMessages";
 import useLSuserid from "../../../../LoginScreen/LSComponents/LSButtons/LSButtonsStore/LSuserid";
 import useHistoryListStore from "./HistoryListStore";
 import useMessageListStore from "../../MAChat/MAMessages/MessageListStore";
@@ -34,8 +34,8 @@ function HistoryListElement(props) {
 
     return (
         <div id="HistoryListElement" onClick={handleClick}>
-            <div><h2>{props.name}</h2></div>
-            <div><p>{props.personality}</p></div>
+            <div id ="HistoryListELementTitle">{props.name}</div>
+            <div id="HistoryListElementText">{props.personality}</div>
         </div>
     )
 }
