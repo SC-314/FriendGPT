@@ -4,7 +4,7 @@ import useMessageListStore from "../src/MainApp/MAComponents/MAChat/MAMessages/M
 async function getAllMessages(userid, chatid, setMessageListStore) {
 
     var finalresponse;
-    await fetch("http://localhost:3000/getAllMessages", {
+    await fetch(`${import.meta.env.VITE_API_URL}/getAllMessages`, {
         method:"POST",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify({userid: userid, chatid: chatid})
