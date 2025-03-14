@@ -1,5 +1,4 @@
 import React, { use } from "react";
-import useMessageListStore from "../src/MainApp/MAComponents/MAChat/MAMessages/MessageListStore";
 
 async function getAllMessages(userid, chatid, setMessageListStore) {
 
