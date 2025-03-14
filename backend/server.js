@@ -95,6 +95,7 @@ app.post("/AIresponse", async(req, res) => {
 
 
     console.log(data.ainame)
+    console.log("USERNAMEUSERNAMEUSERNAMEUSERNAMEUSERNAMEUSERNAME: " + data.username)
 
     AIprompt.unshift({
         role: "system",
