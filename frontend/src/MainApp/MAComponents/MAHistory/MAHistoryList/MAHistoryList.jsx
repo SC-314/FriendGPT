@@ -1,7 +1,7 @@
 import React from "react";
 import HistoryListElement from "./HistoryListElement";
 import useHistoryListStore from "./HistoryListStore";
-import getAllChats from "../../../../../server/getAllChats";
+import getAllChats from "../../../../server/getAllChats";
 import useLSuserid from "../../../../LoginScreen/LSComponents/LSButtons/LSButtonsStore/LSuserid";
 
 function MAHistoryList() {
