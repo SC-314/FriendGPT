@@ -84,12 +84,12 @@ app.post("/AIresponse", async(req, res) => {
     const data = req.body;
     console.log(req.body)
     const size = data.message.length
-    const currentHistory = data.message.slice(size - 10, size);
+    const currentHistory = data.message.slice(size -4, size);
     const AIprompt = currentHistory.map(element => {
         if (element[1] == 'true') {
-            return({"role":"user", "content": element[0]});
+            return({"role":"user", "content": element[0]});  // Get the message (element[0]) from the tuple
         } else {
-            return({"role":"assistant", "content": element[0]});
+            return({"role":"assistant", "content": element[0]});  // Same here for AI message
         }
     });
 
@@ -98,11 +98,10 @@ app.post("/AIresponse", async(req, res) => {
 
     AIprompt.unshift({
         role: "system",
-        content: `You are a ${data.aiisgirl ? "girl" : "boy"} named ${data.ainame}. 
-        Default to a friendly tone unless told to use ${data.aipersonality}. 
-        Respond to ${data.username} with short, concise less than 20 words sentences.`
-    });
-
+        content: "You are a " + (data.aiisgirl ? "girl" : "boy") + ", who is named " + (data.ainame)
+    + ", with personality: " + (data.aipersonality) + " you are having a natural conversation" 
+    + " and messages should be like text messages" + " so keep them as short as possible"
+}) 
 
     console.log("MY PROMPT IS", AIprompt)
     const API_KEY = process.env.AI_API_KEY;
@@ -152,5 +151,4 @@ app.post("/addToChats", async (req, res) => {
 app.listen(port, () => {
     console.log(`Listening on http://localhost:${port}`)
 })
-
 
