@@ -28,26 +28,14 @@ function LSButtonsLogin() {
     }
     
     function handleClick() {
-        fetch(`${import.meta.env.VITE_API_URL}/login`, {
+        fetch("http://localhost:3000/signup", {
             method:"POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({username:username, password:password})
             })
             .then(res => res.text()).then(text => {
                 const data = JSON.parse(text);
-
-
-            if (data[0] == true) {
-                setLoggedIn('true')
-                setLSuserid(data[1])
-                console.log(`primary key is: ${data[1]}`)
-                // getAllMessages(data[1], 1, setMessageListStore)
-                getAllChats(data[1], setHistoryListStore)
-                
-            } else {
-                console.log(data[0])
-                timedMessage("Invalid username or password!")
-            }
+                timedMessage(data[0])
         })
     }
 
