@@ -97,8 +97,8 @@ app.post("/AIresponse", async(req, res) => {
 
     AIprompt.unshift({
         role: "system",
-        content: "You are a " + (data.aiisgirl ? "girl" : "boy") + " named " + (data.ainame)
-    + " with personality: " + (data.aipersonality) + " you are having a natural conversation" 
+        content: "You are a " + (data.aiisgirl ? "girl" : "boy") + ", who is named " + (data.ainame)
+    + ", with personality: " + (data.aipersonality) + " you are having a natural conversation" 
     + " and messages should be like text messages"
 }) 
 
