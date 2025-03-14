@@ -29,3 +29,8 @@
     resize: none;
 }
 
+@media (max-width: 430px) {
+    #MATextArea > textarea {
+        font-size:small;
+    }
+}
