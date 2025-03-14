@@ -100,8 +100,8 @@ app.post("/AIresponse", async(req, res) => {
     AIprompt.unshift({
         role: "system",
         content: "You are a " + (data.aiisgirl ? "girl" : "boy") + ", who is named " + (data.ainame)
-    + ", with personality: " + (data.aipersonality) + ", you are having a natural conversation with "+ (data.username)
-    + ", keep the messages very short"
+    + ", with personality: " + (data.aipersonality) + ", you are messaging someone named "+ (data.username)
+    + "You must refer to them as " + (data.username) +  ", keep the messages very short"
 }) 
 
     console.log("MY PROMPT IS", AIprompt)
