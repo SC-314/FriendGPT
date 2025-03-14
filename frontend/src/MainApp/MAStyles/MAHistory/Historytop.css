@@ -1,0 +1,47 @@
+#MAHistoryTop {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    border: 3px solid black;
+}
+
+#MAhistoryAddContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#MAHIstoryAdd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 90%;
+    border: 3px solid black;
+    border-radius: 4%;
+}
+
+#MAHistoryAddSymbol {
+    font-size:xx-large;
+}
+
+#MAHistoryTopAreaContainer {
+    height:100%;
+    width: 100%;
+}
+
+#MAHistoryTopArea {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#MAHistoryTopArea > div {
+    font-size: xx-large;
+}
+
+#MAHistoryAddButton {
+    font-size: x-large;
+    height: 100%;
+    width: 100%;
+}

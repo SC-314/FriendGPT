@@ -1,0 +1,25 @@
+#LSTitle {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 2fr 3fr 3fr;
+    grid-template-columns: 1fr 5fr 5fr 1fr;
+
+}
+
+#LSTitleHeader {
+    grid-column: span 4;
+}
+
+#LSTitleMain {
+    font-size: 2.5rem;
+}
+
+#LSTitleImgDiv {
+    display: flex;
+    grid-row: span 2;
+    padding-left:30px;
+}
+
+#LSTitleImgDiv > img {
+    height: 110px;
+}

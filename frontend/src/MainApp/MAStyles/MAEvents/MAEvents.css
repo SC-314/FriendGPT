@@ -1,0 +1,14 @@
+#MainEvents {
+    display:grid;
+    grid-template-rows: 2fr 15fr;
+    height:100%;
+}
+
+#EventsTitle {
+    border: 1px solid black;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}

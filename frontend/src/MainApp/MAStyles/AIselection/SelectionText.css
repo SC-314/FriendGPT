@@ -1,0 +1,34 @@
+#SelectionText {
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    height: 100%;
+    border-top: 3px solid black;
+}
+
+
+#SelectionTextTitle {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+}
+
+
+
+#SelectionTextArea {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    font-size: xx-large;
+}
+
+#SelectionText textarea {
+    outline:none;
+    resize:none;
+    height: 85%;
+    width: 90%;
+    font-size:larger;
+    border-radius: 4%;
+}

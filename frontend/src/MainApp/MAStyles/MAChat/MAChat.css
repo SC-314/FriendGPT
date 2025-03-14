@@ -1,0 +1,33 @@
+#MainChat {
+    height:100vh;
+    display:grid;
+    grid-template-rows: 2fr 10fr 5fr;
+}
+
+#MAChatArea {
+    overflow-y: auto;
+    height:100%;
+}
+
+#ChatTitleContainer {
+    border: 1px solid black;
+    height: 100%;
+    display:grid;
+    grid-template-rows: 1fr 2fr;
+}
+
+#ChatTitle {
+    font-size:xx-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+#ChatDesc {
+    font-size:x-large;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
