@@ -21,15 +21,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 90vw;
 }
 
 
 
 #ChatDesc {
-    font-size:x-large;
+    font-size:xx-large;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: start;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 90vw;
+    max-height: 10vh;
 }
 
 
@@ -47,11 +54,24 @@
 
 
 @media (max-width: 430px) {
+
+    #ChatTitleContainer {
+        font-size:small !important;
+    }
+
     #ChatDesc {
         overflow: hidden;
         text-overflow: ellipsis;
         max-height: 100px !important;
         width: 80vw;
+        display:flex;
+        justify-content: start;
+        font-size:x-small
+    }
+
+    #ChatTitle {
+        font-size:medium;
+        display:flex
     }
     
     #MAChatArea > ul {
@@ -69,7 +89,7 @@
         height: 50%;
         width: 200px !important;
         margin-right: 40px;
-        margin-bottom:100px;
+        margin-bottom:150px;
     }
 }
 
