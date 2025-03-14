@@ -4,3 +4,22 @@
     height:100%;
 }
 
+@media (max-width: 430px) {
+    #MainHistory * {
+        font-size: x-small !important;
+    }
+}
+
+@media (max-width: 430px) {
+    #HistoryContainer {
+        min-width: 100px !important;
+}
+}
+
+#HistoryListContainer {
+    overflow-y: auto;
+    height: 100%;
+    max-height: 100vh;
+    scrollbar-width:thick;
+    scrollbar-color: rgb(0, 0, 0) transparent;
+}
