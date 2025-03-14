@@ -6,6 +6,7 @@ import useHistoryChatid from "../../MAHistory/MAHistoryList/HistoryChatid.js";
 import useIsGirlStore from "../../AISelection/AISelectionStore/SelectionGenderStore.js";
 import useNameStore from "../../AISelection/AISelectionStore/SelectionNameStore.js";
 import usePersonalityStore from "../../AISelection/AISelectionStore/SelectionPersonalityStore.js";
+import useUsernameStore from "../../../../LoginScreen/LSComponents/LSButtons/LSButtonsStore/LSUsername.js"
 
 function MAChatInput() {
 
@@ -17,6 +18,8 @@ function MAChatInput() {
     const {IsGirlStore, setIsGirlStore} = useIsGirlStore();
     const {NameStore, setNameStore} = useNameStore();
     const {PersonalityStore, setPersonalityStore} = usePersonalityStore();
+
+    const { username } = useUsernameStore();
 
 
     function handleChange(event) {
@@ -50,7 +53,8 @@ function MAChatInput() {
                     method: "POST",
                     headers: {"Content-Type": "application/json"},
                     body: JSON.stringify({userid:LSuserid, chatid:HistoryChatid, message:full,
-                        aiisgirl:IsGirlStore, ainame:NameStore, aipersonality:PersonalityStore})
+                        aiisgirl:IsGirlStore, ainame:NameStore, aipersonality:PersonalityStore,
+                    username:username})
                 }).then(res => res.text()).then(text => {
                     const data = JSON.parse(text);
                     
