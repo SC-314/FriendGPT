@@ -18,7 +18,7 @@ function LSButtonsSignup() {
     }
     
     function handleClick() {
-        fetch("http://localhost:3000/signup", {
+        fetch(`${import.meta.env.VITE_API_URL}/login`, {
             method:"POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({username:username, password:password})
