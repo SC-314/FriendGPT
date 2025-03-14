@@ -71,6 +71,7 @@ async function askAI(AIPrompt, API_KEY) {
 
     const text = await response.text();
     const data = JSON.parse(text);
+    console.log(data);
     const AIResponse = data.choices[0].message.content;
 
     console.log(AIResponse)
