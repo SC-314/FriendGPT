@@ -17,4 +17,25 @@
     width: 100%;
     display: grid;
     grid-template-rows: 3fr 1fr 1fr 1fr 2fr;
+
+}
+
+@media (max-width: 430px) {
+    #AISelectionGrid * {
+        font-size: small !important;
+    }
+}
+
+@media (max-width: 1000px) {
+    #AISelectionGrid * {
+        font-size: large !important;
+    }
+}
+
+#AISelectionGrid * {
+    font-size: large
+}
+
+#AISelectionContainer * {
+    font-size:2vh !important;
 }
