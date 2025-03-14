@@ -9,3 +9,10 @@
     padding: 10px;
     border-radius: 10%;
 }
+
+@media (max-width: 430px) {
+    #MAUserMsgContainer {
+        max-width: 70vw;
+    }
+}
+
