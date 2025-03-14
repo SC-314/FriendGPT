@@ -33,29 +33,18 @@
 }
 
 
+
 @media (max-width: 430px) {
-    #MAChatArea * {
+    #MainChat {
+        width:200px !important;
         font-size: x-small !important;
     }
-}
-
-@media (max-width: 430px) {
-    #MAChatArea * {
-        font-size: x-small !important;
-    }
-}
-
-@media (max-width: 430px) {
+    
     #MAChatInputContainer {
-        width:70vw !important
+        width: 50% !important;
     }
 }
 
-@media (max-width: 300px) {
-    #MAChatInputContainer {
-        width:60vw !important
-    }
-}
 
 @media (max-width: 430px) {
     #ChatDesc {
@@ -73,5 +62,13 @@
         width: 100%;
     }
 
+    #MAChatInputContainer {
+        display:flex;
+        align-self: end;
+        justify-content: center;
+        height: 50%;
+        width: 200px !important;
+        margin-right: 40px;
+    }
 }
 
