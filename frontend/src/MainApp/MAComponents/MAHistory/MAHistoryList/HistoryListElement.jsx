@@ -33,8 +33,8 @@ function HistoryListElement(props) {
 
     return (
         <div id="HistoryListElement" onClick={handleClick}>
-            <div><h2>{props.name}</h2></div>
-            <div><p>{props.personality}</p></div>
+            <div id ="HistoryListELementTitle">{props.name}</div>
+            <div id="HistoryListElementText">{props.personality}</div>
         </div>
     )
 }
