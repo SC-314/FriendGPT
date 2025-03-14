@@ -48,13 +48,13 @@ function MAChatInput() {
                 })
                 setMessageListStore(full);
                 // console.log(MessageListStore);
+                console.log("USERNAMEUSERNAMEUSERNAMEUSERNAME: " + username)
 
                 fetch(`${import.meta.env.VITE_API_URL}/AIresponse`, {
                     method: "POST",
                     headers: {"Content-Type": "application/json"},
                     body: JSON.stringify({userid:LSuserid, chatid:HistoryChatid, message:full,
-                        aiisgirl:IsGirlStore, ainame:NameStore, aipersonality:PersonalityStore,
-                    username:username})
+                        aiisgirl:IsGirlStore, ainame:NameStore, aipersonality:PersonalityStore, username:username})
                 }).then(res => res.text()).then(text => {
                     const data = JSON.parse(text);
                     
