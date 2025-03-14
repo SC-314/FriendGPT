@@ -1,29 +1,19 @@
-import React, { useState } from "react";
-import {create} from 'zustand';
+import React, { useState } from 'react';
 import useUsernameStore from './LSButtonsStore/LSUsername';
 import usePasswordStore from './LSButtonsStore/LSPassword';
 import useLoggedIn from "../../LoginScreenStore";
-import useLSuserid from "./LSButtonsStore/LSuserid";
-import useMessageListStore from "../../../MainApp/MAComponents/MAChat/MAMessages/MessageListStore";
-import getAllMessages from "../../../server/getAllMessages";
-import getAllChats from "../../../server/getAllChats";
-import useHistoryListStore from "../../../MainApp/MAComponents/MAHistory/MAHistoryList/HistoryListStore";
 
-function LSButtonsLogin() {
+function LSButtonsSignup() {
 
-    const [loginMessage, setLoginMessage] = useState("login")
+    const [signupMessage, setSignupMessage] = useState("signup")
     const { username } = useUsernameStore();
     const { password } = usePasswordStore();
-    const { setLoggedIn } = useLoggedIn();
-    const { setLSuserid } = useLSuserid();
-    const { MessageListStore, setMessageListStore } = useMessageListStore();
-    const { HistoryListSTore, setHistoryListStore } = useHistoryListStore();
-    
+    const { setLoggedIn} = useLoggedIn();
 
     function timedMessage(msg) {
-        setLoginMessage(msg)
+        setSignupMessage(msg)
         setTimeout(() => {
-            setLoginMessage("login")
+            setSignupMessage("signup")
         }, 2000)
     }
     
@@ -35,13 +25,14 @@ function LSButtonsLogin() {
             })
             .then(res => res.text()).then(text => {
                 const data = JSON.parse(text);
-                timedMessage(data[0])
+            timedMessage(data[0])
         })
     }
 
+
     return(
-        <button id="LSButtonsLogin" onClick={handleClick}>{loginMessage}</button>
+        <button id="LSButtonsSignup" onClick={handleClick}>{signupMessage}</button>
     )
 };
 
-export default LSButtonsLogin;
+export default LSButtonsSignup;
