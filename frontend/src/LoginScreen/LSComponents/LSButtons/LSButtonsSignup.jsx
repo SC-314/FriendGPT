@@ -25,7 +25,7 @@ function LSButtonsSignup() {
             })
             .then(res => res.text()).then(text => {
                 const data = JSON.parse(text);
-            timedMessage(data[0])
+                timedMessage(data[0])
         })
     }
 
